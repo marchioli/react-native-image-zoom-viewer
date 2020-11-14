@@ -221,6 +221,8 @@ export class Props {
     //
   };
 
+  public deleteImage?: (index?: number) => void = () => {
+
   /**
    * 当图片切换时触发
    */
