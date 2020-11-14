@@ -637,15 +637,11 @@ export default class ImageViewer extends React.Component<Props, State> {
    */
   public saveToLocal = () => {
     
+    this.props.deleteImage(this.state.currentShowIndex)
+    //   _this.setState({currentShowIndex: 0})
     
-    if (!this.props.onSave) {
-      CameraRoll.saveToCameraRoll(this.props.imageUrls[this.state.currentShowIndex || 0].url);
-      this!.props!.onSaveToCamera!(this.state.currentShowIndex);
-    } else {
-      this.props.onSave(this.props.imageUrls[this.state.currentShowIndex || 0].url);
-    }
+    this.setState({ isShowMenu: false, currentShowIndex: 0 });
 
-    this.setState({ isShowMenu: false });
   };
 
   public getMenu() {
