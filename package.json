@@ -4,10 +4,6 @@
   "description": "react native image viewer,大图浏览",
   "main": "built/index.js",
   "types": "built/index.d.ts",
-  "scripts": {
-    "prepare": "rm -rf built && tsc",
-    "start": "tsc -w --outDir demo/built"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ascoders/react-native-image-viewer.git"
